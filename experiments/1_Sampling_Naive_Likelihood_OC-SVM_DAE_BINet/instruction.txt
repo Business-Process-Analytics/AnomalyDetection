@@ -1,0 +1,13 @@
+
+为了使原始的XES事件日志能符合算法的检测要求，需要将原始的XES文件解压后，打开，并使用下述内容替换XES中的相应内容：
+<global scope="event">
+	<string key="Activity" value="string"/>
+	<string key="concept:name" value="name"/>
+	<string key="lifecycle:transition" value="transition"/>
+	<date key="time:timestamp" value="1970-01-01T00:00:00+01:00"/>	
+</global>
+
+若原始的XES文件没有<global scope="event">标签，则在<log>标签下加入上述内容。
+
+1_Sampling_Naive_Likelihood_OC-SVM_DAE_BINet\.res\bpic文件夹中的数据已经过上述步骤进行处理。
+上述处理只针对原始的XES事件日志。
